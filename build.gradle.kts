@@ -7,9 +7,8 @@ plugins {
 
 repositories {
     mavenLocal()
-    maven {
-        url = uri("https://repo.papermc.io/repository/maven-public/")
-    }
+    mavenCentral()
+    maven("https://repo.papermc.io/repository/maven-public/")
 }
 
 java {
@@ -19,6 +18,7 @@ java {
 
 dependencies {
     compileOnly(libs.paper.api)
+    compileOnly(libs.commandapi)
     compileOnly(libs.configlib.yaml)
     compileOnly(libs.configlib.paper)
     compileOnly(libs.lombok)
@@ -90,6 +90,7 @@ tasks {
         }
 
         downloadPlugins {
+            url("https://github.com/JorelAli/CommandAPI/releases/download/9.5.1/CommandAPI-9.5.1.jar")
             url("https://github.com/EssentialsX/Essentials/releases/download/2.20.1/EssentialsX-2.20.1.jar")
             url("https://download.luckperms.net/1552/bukkit/loader/LuckPerms-Bukkit-5.4.137.jar")
             url("https://ci.lucko.me/job/spark/439/artifact/spark-bukkit/build/libs/spark-1.10.93-bukkit.jar")
