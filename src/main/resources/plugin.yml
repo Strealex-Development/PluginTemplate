@@ -1,0 +1,10 @@
+name: TemplatePlugin
+version: ${version}
+main: xyz.strealex.pluginname.PluginName
+api-version: '1.20'
+authors: [ Bram ]
+description: Your plugin description here.
+load: POSTWORLD
+libraries:
+  - de.exlll:configlib-yaml:${configlibVersion}
+  - de.exlll:configlib-paper:${configlibVersion}
