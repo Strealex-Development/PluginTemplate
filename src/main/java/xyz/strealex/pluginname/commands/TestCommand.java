@@ -25,6 +25,5 @@ public class TestCommand {
                     player.setLevel(player.getLevel() - 30);
                 })
                 .register();
-
     }
 }
