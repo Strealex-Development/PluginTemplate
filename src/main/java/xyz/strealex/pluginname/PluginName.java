@@ -2,6 +2,7 @@ package xyz.strealex.pluginname;
 
 import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
+import xyz.strealex.pluginname.commands.TestCommand;
 import xyz.strealex.pluginname.config.ConfigManager;
 
 import java.util.Optional;
@@ -33,7 +34,7 @@ public final class PluginName extends JavaPlugin {
     }
 
     private void registerCommands() {
-
+        new TestCommand();
     }
 
     private void registerListeners() {
