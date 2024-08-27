@@ -29,8 +29,7 @@ public final class PluginName extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        getLogger().info("Disabling plugin 'TotemGuard'...");
-        saveDefaultConfig();
+        getLogger().info("Disabling plugin...");
     }
 
     private void registerCommands() {
