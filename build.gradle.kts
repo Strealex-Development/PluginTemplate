@@ -49,7 +49,7 @@ tasks {
 
     withType<JavaCompile> {
         options.encoding = Charsets.UTF_8.name()
-        options.release = 17
+        options.release = 21
     }
 
     withType<Javadoc>() {
@@ -74,8 +74,8 @@ tasks {
     // 1.17           = Java 16
     // 1.18 - 1.20.4  = Java 17
     // 1-20.5+        = Java 21
-    val version = "1.20.4"
-    val javaVersion = JavaLanguageVersion.of(17)
+    val version = "1.21.4"
+    val javaVersion = JavaLanguageVersion.of(21)
 
     val jvmArgsExternal = listOf(
         "-Dcom.mojang.eula.agree=true"
@@ -90,10 +90,10 @@ tasks {
         }
 
         downloadPlugins {
-            url("https://github.com/JorelAli/CommandAPI/releases/download/9.5.1/CommandAPI-9.5.1.jar")
-            url("https://github.com/EssentialsX/Essentials/releases/download/2.20.1/EssentialsX-2.20.1.jar")
-            url("https://download.luckperms.net/1552/bukkit/loader/LuckPerms-Bukkit-5.4.137.jar")
-            url("https://ci.lucko.me/job/spark/439/artifact/spark-bukkit/build/libs/spark-1.10.93-bukkit.jar")
+            url("https://github.com/CommandAPI/CommandAPI/releases/download/10.0.1/CommandAPI-10.0.1.jar")
+            url("https://github.com/EssentialsX/Essentials/releases/download/2.21.1/EssentialsX-2.21.1.jar")
+            url("https://download.luckperms.net/1587/bukkit/loader/LuckPerms-Bukkit-5.5.2.jar")
+            url("https://ci.lucko.me/job/spark/487/artifact/spark-bukkit/build/libs/spark-1.10.138-bukkit.jar")
         }
 
         jvmArgs = jvmArgsExternal
