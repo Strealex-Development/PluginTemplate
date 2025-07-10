@@ -8,6 +8,10 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class TestCommand {
 
+    public TestCommand() {
+        registerTestCommand();
+    }
+
     private void registerTestCommand() {
         new CommandAPICommand("repair")
                 .withRequirement(sender -> ((Player) sender).getLevel() >= 30)
