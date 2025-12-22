@@ -22,6 +22,9 @@ dependencies {
     compileOnly(libs.configlib.yaml)
     compileOnly(libs.configlib.paper)
     compileOnly(libs.lombok)
+
+    implementation(libs.hikaricp)
+
     annotationProcessor(libs.lombok)
 }
 

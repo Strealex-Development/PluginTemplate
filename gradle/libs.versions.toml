@@ -5,6 +5,7 @@ commandapi = "10.0.1"
 configlib = "4.6.1"
 shadow = "8.3.6"
 run-paper = "2.3.1"
+hikaricp = "7.0.2"
 
 [libraries]
 paper-api = { module = "io.papermc.paper:paper-api", version.ref = "paper-api" }
@@ -12,6 +13,7 @@ lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" 
 commandapi = { group = "dev.jorel", name = "commandapi-bukkit-core", version.ref = "commandapi" }
 configlib-yaml = { group = "de.exlll", name = "configlib-yaml", version.ref = "configlib" }
 configlib-paper = { group = "de.exlll", name = "configlib-paper", version.ref = "configlib" }
+hikaricp = { module = "com.zaxxer:HikariCP", version.ref = "hikaricp"}
 
 [plugins]
 run-paper = { id = "xyz.jpenilla.run-paper", version.ref = "run-paper" }

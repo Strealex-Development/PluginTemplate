@@ -14,20 +14,20 @@ public class TestCommand {
 
     private void registerTestCommand() {
         new CommandAPICommand("repair")
-                .withRequirement(sender -> ((Player) sender).getLevel() >= 30)
-                .executesPlayer((player, args) -> {
+            .withRequirement(sender -> ((Player) sender).getLevel() >= 30)
+            .executesPlayer((player, args) -> {
 
-                    // Repair the item back to full durability
-                    ItemStack is = player.getInventory().getItemInMainHand();
-                    ItemMeta itemMeta = is.getItemMeta();
-                    if (itemMeta instanceof Damageable damageable) {
-                        damageable.damage(0);
-                        is.setItemMeta(itemMeta);
-                    }
+                // Repair the item back to full durability
+                ItemStack is = player.getInventory().getItemInMainHand();
+                ItemMeta itemMeta = is.getItemMeta();
+                if (itemMeta instanceof Damageable damageable) {
+                    damageable.damage(0);
+                    is.setItemMeta(itemMeta);
+                }
 
-                    // Subtract 30 levels
-                    player.setLevel(player.getLevel() - 30);
-                })
-                .register();
+                // Subtract 30 levels
+                player.setLevel(player.getLevel() - 30);
+            })
+            .register();
     }
 }
